@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desa Pematang Sukatani - Kecamatan mesuji makmur</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0febe8c6-91d5-4152-bc25-cd3ac9b9c4ff.png') no-repeat center center;
+            background-size: cover;
+            height: 90vh;
+        }
+        
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .news-card:hover .news-overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navbar -->
+    <nav class="bg-green-800 text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg0uLSPilroUh7OmaoQH1jDEw68nl8-_L4yw7ThzVxSmPL59c8ce1qI138RfrYKPB-KClRwX-otA2N3AhWSSpICO8WU69lgHw1r-rvefk9YEFDuUYirNKI8GR0_Qllpjo6jhyphenhyphenJF6BNVMAg/s1600/logo+kabupaten+ogan+komering+ilir+sumsel.png" class="h-12 w-12 rounded-full">
+                <div>
+                    <h1 class="text-xl font-bold">DESA PEMATANG SUKATANI</h1>
+                    <p class="text-xs text-gray-200">Kecamatan mesuji makmur</p>
+                </div>
+            </div>
+            
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#home" class="hover:text-yellow-300 transition">Beranda</a>
+                
+                <div class="dropdown relative">
+                    <button class="hover:text-yellow-300 flex items-center">
+                        Profil <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                    </button>
+                    <div class="dropdown-menu absolute hidden bg-white text-gray-800 shadow-lg rounded mt-2 w-48">
+                        <a href="#profile" class="block px-4 py-2 hover:bg-gray-100">Profil Desa</a>
+                        <a href="#history" class="block px-4 py-2 hover:bg-gray-100">Sejarah</a>
+                        <a href="#demography" class="block px-4 py-2 hover:bg-gray-100">Demografi</a>
+                        <a href="#structure" class="block px-4 py-2 hover:bg-gray-100">Struktur Organisasi</a>
+                    </div>
+                </div>
+                
+                <a href="#services" class="hover:text-yellow-300 transition">Pelayanan</a>
+                <a href="#news" class="hover:text-yellow-300 transition">Berita</a>
+                <a href="#gallery" class="hover:text-yellow-300 transition">Galeri</a>
+                <a href="#contact" class="hover:text-yellow-300 transition">Kontak</a>
+            </div>
+            
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-green-700 px-4 pb-4">
+            <a href="#home" class="block py-2 border-b border-green-600">Beranda</a>
+            <a href="#profile" class="block py-2 border-b border-green-600">Profil Desa</a>
+            <a href="#services" class="block py-2 border-b border-green-600">Pelayanan</a>
+            <a href="#news" class="block py-2 border-b border-green-600">Berita</a>
+            <a href="#gallery" class="block py-2 border-b border-green-600">Galeri</a>
+            <a href="#contact" class="block py-2">Kontak</a>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section id="home" class="hero-section flex items-center justify-center text-center text-white">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">SELAMAT DATANG DI</h1>
+            <h2 class="text-3xl md:text-5xl font-bold mb-6">DESA PEMATANG SUKATANI</h2>
+            <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">Desa yang maju, sejahtera, dan ramah dengan masyarakat yang harmonis</p>
+            <div class="flex justify-center space-x-4">
+                <a href="#profile" class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-3 px-6 rounded-lg transition">Kenali Desa Kami</a>
+                <a href="#contact" class="bg-transparent border-2 border-white hover:bg-white hover:text-gray-900 text-white font-bold py-3 px-6 rounded-lg transition">Hubungi Kami</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Quick Info -->
+    <section class="bg-gray-100 py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md flex items-center space-x-4">
+                    <div class="bg-green-100 p-4 rounded-full">
+                        <i class="fas fa-users text-green-600 text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-500">JUMLAH PENDUDUK</h3>
+                        <p class="text-2xl font-bold" id="population">1.376</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md flex items-center space-x-4">
+                    <div class="bg-blue-100 p-4 rounded-full">
+                        <i class="fas fa-home text-blue-600 text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-500">JUMLAH KELUARGA</h3>
+                        <p class="text-2xl font-bold" id="families">3.456</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md flex items-center space-x-4">
+                    <div class="bg-yellow-100 p-4 rounded-full">
+                        <i class="fas fa-calendar-alt text-yellow-600 text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-500">KEGIATAN</h3>
+                        <p class="text-2xl font-bold" id="events">128</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md flex items-center space-x-4">
+                    <div class="bg-purple-100 p-4 rounded-full">
+                        <i class="fas fa-trophy text-purple-600 text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-500">PRESTASI</h3>
+                        <p class="text-2xl font-bold" id="achievements">24</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Profil Desa -->
+    <section id="profile" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">PROFIL DESA PEMATANG SUKATANI</h2>
+                <div class="w-20 h-1 bg-green-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <div>
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ce9283b1-5754-4929-b040-b775a303128b.png" alt="Pemandangan Desa Pematang Sukatani dengan sawah hijau dan rumah penduduk" class="rounded-lg shadow-lg">
+                </div>
+                <div>
+                    <p class="text-gray-700 mb-6">Desa Pematang Sukatani adalah salah satu desa di Kecamatan mesuji makmur yang memiliki luas wilayah sekitar 16.00 hektar. Desa ini dikenal dengan masyarakatnya yang ramah dan lingkungan yang asri.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-green-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Lokasi</h4>
+                                <p class="text-gray-600">kecamatan mesuji makmur, kabupaten ogan komering ilir</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-route text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Wilayah</h4>
+                                <p class="text-gray-600">4 Dusun, 4 RW, 12 RT</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-yellow-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-calendar text-yellow-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Berdiri</h4>
+                                <p class="text-gray-600">Tahun 1965</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#history" class="mt-6 inline-block bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-6 rounded-lg transition">
+                        Baca Selengkapnya
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Sejarah Desa -->
+    <section id="history" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">SEJARAH DESA</h2>
+                <div class="w-20 h-1 bg-green-600 mx-auto"></div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="relative pl-8">
+                    <div class="absolute h-full w-1 bg-green-200 left-0 top-0"></div>
+                    
+                    <div class="mb-8 relative">
+                        <div class="absolute -left-10 top-2 h-6 w-6 rounded-full bg-green-600 flex items-center justify-center">
+                            <i class="fas fa-circle text-white text-xs"></i>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Tahun 1965</h3>
+                            <p class="text-gray-700">Pembentukan Desa Pematang Sukatani dari hasil pemekaran wilayah desa tetangga. Nama "Pematang Sukatani" diambil dari kondisi geografisnya yang berupa pematang dan banyak tanaman sukatani.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-8 relative">
+                        <div class="absolute -left-10 top-2 h-6 w-6 rounded-full bg-green-600 flex items-center justify-center">
+                            <i class="fas fa-circle text-white text-xs"></i>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Tahun 1978</h3>
+                            <p class="text-gray-700">Dibangunnya balai desa pertama sebagai pusat administrasi dan kegiatan masyarakat. Pembangunan infrastruktur dasar seperti jalan dan irigasi mulai dilakukan.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-8 relative">
+                        <div class="absolute -left-10 top-2 h-6 w-6 rounded-full bg-green-600 flex items-center justify-center">
+                            <i class="fas fa-circle text-white text-xs"></i>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Tahun 1995</h3>
+                            <p class="text-gray-700">Pembangunan fasilitas pendidikan dan kesehatan seperti SDN Pematang Sukatani dan Posyandu Desa. Perubahan sistem pertanian dari tradisional ke semi-modern.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="relative">
+                        <div class="absolute -left-10 top-2 h-6 w-6 rounded-full bg-green-600 flex items-center justify-center">
+                            <i class="fas fa-circle text-white text-xs"></i>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Tahun 2010 - Sekarang</h3>
+                            <p class="text-gray-700">Pengembangan desa secara menyeluruh dengan program-program pemberdayaan masyarakat, sistem administrasi berbasis digital, dan peningkatan kualitas infrastruktur desa.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Visi Misi -->
+    <section class="py-16 bg-green-800 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">VISI & MISI DESA PEMATANG SUKATANI</h2>
+                <div class="w-20 h-1 bg-yellow-500 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+                <div class="text-center">
+                    <div class="bg-green-700 p-4 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-eye text-4xl text-yellow-300"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">VISI</h3>
+                    <p class="italic">"Terwujudnya Desa Pematang Sukatani yang Maju, Mandiri, Sejahtera, Berkeadilan, dan Berakhlak Mulia Berdasarkan Pancasila dan Undang-Undang Dasar 1945"</p>
+                </div>
+                
+                <div>
+                    <div class="bg-green-700 p-4 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-bullseye text-4xl text-yellow-300"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-center">MISI</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-yellow-300 mt-1 mr-2"></i>
+                            <span>Meningkatkan kualitas pelayanan publik yang transparan dan akuntabel</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-yellow-300 mt-1 mr-2"></i>
+                            <span>Mengembangkan potensi ekonomi masyarakat berbasis kekuatan lokal</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-yellow-300 mt-1 mr-2"></i>
+                            <span>Membangun infrastruktur desa yang berkualitas dan berkelanjutan</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-yellow-300 mt-1 mr-2"></i>
+                            <span>Meningkatkan sumber daya manusia yang beriman, cerdas, dan berakhlak mulia</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Struktur Organisasi -->
+    <section id="structure" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">STRUKTUR ORGANISASI DESA</h2>
+                <div class="w-20 h-1 bg-green-600 mx-auto"></div>
+            </div>
+            
+            <div class="overflow-x-auto">
+                <div class="min-w-[800px]">
+                    <div class="bg-green-700 text-white p-4 rounded-t-lg">
+                        <h3 class="text-xl font-bold">PEMERINTAH DESA PEMATANG SUKATANI</h3>
+                    </div>
+                    
+                    <div class="flex border-b border-gray-200 bg-gray-50">
+                        <div class="w-1/3 p-4 font-bold border-r border-gray-200">KEPALA DESA</div>
+                        <div class="w-2/3 p-4">kamaludin, S.H.</div>
+                    </div>
+                    
+                    <div class="flex border-b border-gray-200">
+                        <div class="w-1/3 p-4 font-bold border-r border-gray-200 bg-gray-50">SEKRETARIS DESA</div>
+                        <div class="w-2/3 p-4">rahmat hidayat</div>
+                    </div>
+                    
+                    <div class="flex border-b border-gray-200">
+                        <div class="w-1/3 p-4 font-bold border-r border-gray-200 bg-gray-50">KEPALA URUSAN</div>
+                        <div class="w-2/3 p-4">
+                            <div class="border-b border-gray-200 pb-2 mb-2">
+                                <strong>Kepala Urusan Pemerintahan:</strong> HERY SETIAWAN
+                            </div>
+                            <div class="border-b border-gray-200 pb-2 mb-2">
+                                <strong>Kepala Urusan Pembangunan:</strong> SUGENG HANDAYANI
+                            </div>
+                            <div>
+                                <strong>Kepala Urusan Kesejahteraan Rakyat:</strong> RINI FATMAWATI
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex border-b border-gray-200">
+                        <div class="w-1/3 p-4 font-bold border-r border-gray-200 bg-gray-50">KEPALA DUSUN</div>
+                        <div class="w-2/3 p-4">
+                            <div class="border-b border-gray-200 pb-2 mb-2">
+                                <strong>Dusun Sukatani:</strong> EKO PRASETYO
+                            </div>
+                            <div class="border-b border-gray-200 pb-2 mb-2">
+                                <strong>Dusun Pematang:</strong> BAMBANG HARTONO
+                            </div>
+                            <div class="border-b border-gray-200 pb-2 mb-2">
+                                <strong>Dusun Mekarsari:</strong> DIAN KUSUMAWATI
+                            </div>
+                            <div>
+                                <strong>Dusun Ciptamarga:</strong> AGUS SUSANTO
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex">
+                        <div class="w-1/3 p-4 font-bold border-r border-gray-200 bg-gray-50">BADAN PERMUSYAWARATAN DESA</div>
+                        <div class="w-2/3 p-4">
+                            <div><strong>Ketua:</strong> SURYADI</div>
+                            <div><strong>Wakil Ketua:</strong> ANWAR SADIKIN</div>
+                            <div><strong>Sekretaris:</strong> TUTI RAHAYU</div>
+                            <div><strong>Anggota:</strong> 8 Orang</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Pelayanan -->
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">PELAYANAN MASYARAKAT</h2>
+                <div class="w-20 h-1 bg-green-600 mx-auto"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto mt-4">Berbagai layanan administrasi yang dapat dimanfaatkan oleh masyarakat Desa Pematang Sukatani</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Kartu Pelayanan 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:shadow-xl card-hover">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/92e95b84-e553-49e8-b030-0227879c2098.png" alt="Proses pembuatan KTP elektronik di kantor desa" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded-full inline-block mb-3">
+                            Administrasi Kependudukan
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Pembuatan KTP-e</h3>
+                        <p class="text-gray-600 mb-4">Pelayanan pembuatan dan perpanjangan Kartu Tanda Penduduk elektronik untuk warga Desa Pematang Sukatani.</p>
+                        <button class="service-btn bg-green-700 hover:bg-green-800 text-white font-medium py-2 px-4 rounded-full transition" data-service="ktp">
+                            Lihat Persyaratan
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Kartu Pelayanan 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:shadow-xl card-hover">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/917eb952-fe66-4803-a056-82af4aa2e499.png" alt="Proses pembuatan akta kelahiran di kantor desa" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full inline-block mb-3">
+                            Catatan Sipil
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Pembuatan Akta Kelahiran</h3>
+                        <p class="text-gray-600 mb-4">Layanan pencatatan kelahiran dan penerbitan akta kelahiran untuk warga baru Desa Pematang Sukatani.</p>
+                        <button class="service-btn bg-blue-700 hover:bg-blue-800 text-white font-medium py-2 px-4 rounded-full transition" data-service="akta">
+                            Lihat Persyaratan
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Kartu Pelayanan 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:shadow-xl card-hover">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/476379ea-939f-4ce7-9616-9b6ab3a51da2.png" alt="Warga sedang mengurus surat keterangan usaha" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded-full inline-block mb-3">
+                            Ekonomi & Bisnis
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Surat Keterangan Usaha</h3>
+                        <p class="text-gray-600 mb-4">Pelayanan penerbitan surat keterangan usaha sebagai dukungan pemerintah desa terhadap pengusaha lokal.</p>
+                        <button class="service-btn bg-yellow-600 hover:bg-yellow-700 text-white font-medium py-2 px-4 rounded-full transition" data-service="sku">
+                            Lihat Persyaratan
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#services" class="bg-green-700 hover:bg-green-800 text-white font-bold py-3 px-8 rounded-lg inline-block transition">
+                    Lihat Semua Layanan
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Modal Persyaratan -->
+    <div id="serviceModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center hidden">
+        <div class="bg-white rounded-lg max-w-md w-full mx-4 max-h-[80vh] overflow-y-auto">
+            <div class="flex justify-between items-center border-b px-6 py-4">
+                <h3 class="text-xl font-bold" id="modalTitle">Persyaratan Layanan</h3>
+                <button id="closeModal" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="p-6" id="modalContent">
+                <!-- Konten akan diisi oleh JavaScript -->
+            </div>
+            <div class="border-t px-6 py-4 text-right">
+                <button id="printBtn" class="bg-green-700 hover:bg-green-800 text-white font-medium py-2 px-4 rounded-full transition">
+                    <i class="fas fa-print mr-2"></i> Cetak Persyaratan
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Berita -->
+    <section id="news" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">BERITA TERKINI</h2>
+                <div class="w-20 h-1 bg-green-600 mx-auto"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto mt-4">Informasi terbaru seputar kegiatan dan perkembangan Desa Pematang Sukatani</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Berita 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md relative news-card">
+                    <div class="h-60 overflow-hidden">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3bb7eb1a-10dd-4f76-bcce-a7b125b3e217.png" alt="Panen raya di Desa Pematang Sukatani dengan hasil melimpah" class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 transition-opacity news-overlay flex items-center justify-center">
+                        <a href="#" class="text-white border-2 border-white px-6 py-2 rounded-full font-medium">Baca Selengkapnya</a>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between text-sm text-gray-500 mb-3">
+                            <span><i class="far fa-calendar-alt mr-1"></i> 15 Juni 2023</span>
+                            <span><i class="far fa-eye mr-1"></i> 245</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Sukses Panen Raya di Dusun Sukatani</h3>
+                        <p class="text-gray-600 mb-4">Petani Dusun Sukatani berhasil meraih hasil panen melimpah dengan implementasi teknologi pertanian modern...</p>
+                        <a href="#" class="text-green-700 font-medium hover:underline">Baca Selengkapnya <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Berita 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md relative news-card">
+                    <div class="h-60 overflow-hidden">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/94c5661c-8eb3-4660-917c-3a16e032bc27.png" alt="Pembagian bansos di balai desa Pematang Sukatani" class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 transition-opacity news-overlay flex items-center justify-center">
+                        <a href="#" class="text-white border-2 border-white px-6 py-2 rounded-full font-medium">Baca Selengkapnya</a>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between text-sm text-gray-500 mb-3">
+                            <span><i class="far fa-calendar-alt mr-1"></i> 7 Juni 2023</span>
+                            <span><i class="far fa-eye mr-1"></i> 312</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Pembagian Bansos Tahap II untuk Warga Kurang Mampu</h3>
+                        <p class="text-gray-600 mb-4">Pemerintah Desa Pematang Sukatani menyalurkan bantuan sosial tahap kedua kepada 250 keluarga kurang mampu...</p>
+                        <a href="#" class="text-green-700 font-medium hover:underline">Baca Selengkapnya <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Berita 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md relative news-card">
+                    <div class="h-60 overflow-hidden">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/764d9bfc-8194-4aae-ada7-743336cd3a3a.png" alt="Pertandingan voli antar dusun di lapangan desa" class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 transition-opacity news-overlay flex items-center justify-center">
+                        <a href="#" class="text-white border-2 border-white px-6 py-2 rounded-full font-medium">Baca Selengkapnya</a>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between text-sm text-gray-500 mb-3">
+                            <span><i class="far fa-calendar-alt mr-1"></i> 1 Juni 2023</span>
+                            <span><i class="far fa-eye mr-1"></i> 189</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Juara Umum Turnamen Voli Antar Dusun 2023</h3>
+                        <p class="text-gray-600 mb-4">Dusun Mekarsari berhasil menjadi juara umum dalam turnamen voli antar dusun yang diadakan dalam rangka HUT Desa...</p>
+                        <a href="#" class="text-green-700 font-medium hover:underline">Baca Selengkapnya <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#news" class="bg-green-700 hover:bg-green-800 text-white font-bold py-3 px-8 rounded-lg inline-block transition">
+                    Lihat Semua Berita
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Galeri -->
+    <section id="gallery" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">GALERI KEGIATAN</h2>
+                <div class="w-20 h-1 bg-green-600 mx-auto"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto mt-4">Dokumentasi berbagai kegiatan dan kehidupan masyarakat Desa Pematang Sukatani</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="relative group">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ba051476-073e-45ce-85e1-23efaeb8e95c.png" alt="Kegiatan gotong royong membersihkan lingkungan desa" class="w-full h-64 object-cover rounded-lg">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 rounded-lg">
+                        <button class="gallery-btn text-white border-2 border-white px-4 py-1 rounded-full" data-image="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c0502c69-50ca-47e7-baa3-6e89358e998a.png" data-title="Gotong Royong Bersih Desa">
+                            <i class="fas fa-expand mr-1"></i> Lihat
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="relative group">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/dc325c7b-55a7-4c3f-abce-39ec9132dd22.png" alt="Pelatihan kerajinan tangan untuk ibu-ibu PKK" class="w-full h-64 object-cover rounded-lg">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 rounded-lg">
+                        <button class="gallery-btn text-white border-2 border-white px-4 py-1 rounded-full" data-image="https://placehold.co/1200x800" data-title="Pelatihan Kerajinan Tangan">
+                            <i class="fas fa-expand mr-1"></i> Lihat
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="relative group">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/feb0c3fc-6b81-4f10-ba9d-953bd4b50a42.png" alt="Kegiatan posyandu di balai desa untuk balita dan lansia" class="w-full h-64 object-cover rounded-lg">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 rounded-lg">
+                        <button class="gallery-btn text-white border-2 border-white px-4 py-1 rounded-full" data-image="https://placehold.co/1200x800" data-title="Kegiatan Posyandu Bulanan">
+                            <i class="fas fa-expand mr-1"></i> Lihat
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="relative group">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/da6ea2fb-46b7-4b37-9f0e-643c37fa07ac.png" alt="Festival budaya dan pentas seni tahunan desa" class="w-full h-64 object-cover rounded-lg">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 rounded-lg">
+                        <button class="gallery-btn text-white border-2 border-white px-4 py-1 rounded-full" data-image="https://placehold.co/1200x800" data-title="Festival Budaya Desa">
+                            <i class="fas fa-expand mr-1"></i> Lihat
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="relative group">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a016e967-126e-4541-8821-1b9397c83b6f.png" alt="Peresmian pembangunan jalan baru oleh kepala desa" class="w-full h-64 object-cover rounded-lg">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 rounded-lg">
+                        <button class="gallery-btn text-white border-2 border-white px-4 py-1 rounded-full" data-image="https://placehold.co/1200x800" data-title="Peresmian Jalan Baru">
+                            <i class="fas fa-expand mr-1"></i> Lihat
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="relative group">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/eb6f9ef5-6345-41ad-bf2b-73cafe078b49.png" alt="Kegiatan tanam serentak dalam program ketahanan pangan" class="w-full h-64 object-cover rounded-lg">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 rounded-lg">
+                        <button class="gallery-btn text-white border-2 border-white px-4 py-1 rounded-full" data-image="https://placehold.co/1200x800" data-title="Tanam Serentak Padi">
+                            <i class="fas fa-expand mr-1"></i> Lihat
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="relative group">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/5d7937f6-9a28-4639-85a5-84db8eab7dde.png" alt="Pelatihan komputer untuk pemuda karang taruna" class="w-full h-64 object-cover rounded-lg">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 rounded-lg">
+                        <button class="gallery-btn text-white border-2 border-white px-4 py-1 rounded-full" data-image="https://placehold.co/1200x800" data-title="Pelatihan Komputer Pemuda">
+                            <i class="fas fa-expand mr-1"></i> Lihat
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="relative group">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/66a5679d-1bd4-4f7b-8dcc-e21de013cc60.png" alt="Peringatan hari kemerdekaan dengan lomba tradisional" class="w-full h-64 object-cover rounded-lg">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 rounded-lg">
+                        <button class="gallery-btn text-white border-2 border-white px-4 py-1 rounded-full" data-image="https://placehold.co/1200x800" data-title="Peringatan HUT RI ke-78">
+                            <i class="fas fa-expand mr-1"></i> Lihat
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#gallery" class="bg-green-700 hover:bg-green-800 text-white font-bold py-3 px-8 rounded-lg inline-block transition">
+                    Lihat Lebih Banyak
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Gallery Modal -->
+    <div id="galleryModal" class="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center hidden">
+        <div class="relative max-w-4xl w-full">
+            <button id="closeGalleryModal" class="absolute -top-12 right-0 text-white text-2xl">
+                <i class="fas fa-times"></i>
+            </button>
+            <img id="modalGalleryImage" src="" alt="" class="w-full max-h-[80vh] object-contain">
+            <h3 id="modalGalleryTitle" class="text-white text-xl font-bold mt-4"></h3>
+        </div>
+    </div>
+    
+    <!-- Kontak -->
+    <section id="contact" class="py-16 bg-green-800 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">HUBUNGI KAMI</h2>
+                <div class="w-20 h-1 bg-yellow-500 mx-auto"></div>
+                <p class="max-w-2xl mx-auto mt-4">Silahkan hubungi kami jika Anda membutuhkan informasi lebih lanjut tentang Desa Pematang Sukatani</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Kantor Desa Pematang Sukatani</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-green-700 p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt text-yellow-300"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Alamat</h4>
+                                <p>DS. pematang sukatani, KEC. mesuji makmur, KAB. ogan komring ilir, PROV. sumatera selatan 30681</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-green-700 p-3 rounded-full mr-4">
+                                <i class="fas fa-phone-alt text-yellow-300"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Telepon</h4>
+                                <p>+6282331728202</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-green-700 p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope text-yellow-300"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Email</h4>
+                                <p>pematangsukatani@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-green-700 p-3 rounded-full mr-4">
+                                <i class="fas fa-clock text-yellow-300"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Jam Layanan</h4>
+                                <p>
+                                    Senin - Kamis: 08.00 - 15.00 WIB<br>
+                                    Jumat: 08.00 - 11.30 WIB<br>
+                                    Sabtu: 08.00 - 13.00 WIB<br>
+                                    Minggu: Libur
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-bold text-lg mb-4">Ikuti Kami</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-green-700 hover:bg-green-600 h-10 w-10 rounded-full flex items-center justify-center transition">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="bg-green-700 hover:bg-green-600 h-10 w-10 rounded-full flex items-center justify-center transition">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="bg-green-700 hover:bg-green-600 h-10 w-10 rounded-full flex items-center justify-center transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="bg-green-700 hover:bg-green-600 h-10 w-10 rounded-full flex items-center justify-center transition">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white text-gray-800 rounded-lg shadow-lg p-8">
+                    <h3 class="text-2xl font-bold mb-6">Kirim Pesan</h3>
+                    <form id="contactForm">
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Nama Lengkap</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="phone" class="block text-gray-700 font-medium mb-2">Nomor Telepon</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="subject" class="block text-gray-700 font-medium mb-2">Subjek</label>
+                            <select id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600">
+                                <option value="">Pilih Subjek</option>
+                                <option value="administrasi">Pelayanan Administrasi</option>
+                                <option value="pengaduan">Pengaduan Masyarakat</option>
+                                <option value="saran">Saran/Masukan</option>
+                                <option value="lainnya">Lainnya</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Pesan</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-green-700 hover:bg-green-800 text-white font-bold py-3 px-4 rounded-lg transition">
+                            Kirim Pesan
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Maps -->
+    <div class="h-96 w-full">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.3801538936143!2d106.84844361476909!3d-6.213570995505179!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e96b5a2255%3A0xdf0a0f9e9824018!2sPondok%20Gede%2C%20Bekasi%20City%2C%20West%20Java!5e0!3m2!1sen!2sid!4v1672734797969!5m2!1sen!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-4">Desa Pematang Sukatani</h3>
+                    <p class="mb-4">Desa yang maju, sejahtera, dan ramah dengan masyarakat yang harmonis.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-4">Link Cepat</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="hover:text-white transition">Beranda</a></li>
+                        <li><a href="#profile" class="hover:text-white transition">Profil Desa</a></li>
+                        <li><a href="#services" class="hover:text-white transition">Pelayanan</a></li>
+                        <li><a href="#news" class="hover:text-white transition">Berita</a></li>
+                        <li><a href="#gallery" class="hover:text-white transition">Galeri</a></li>
+                        <li><a href="#contact" class="hover:text-white transition">Kontak</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-4">Pelayanan</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white transition">Administrasi Kependudukan</a></li>
+                        <li><a href="#" class="hover:text-white transition">Kesehatan</a></li>
+                        <li><a href="#" class="hover:text-white transition">Perizinan</a></li>
+                        <li><a href="#" class="hover:text-white transition">Bantuan Sosial</a></li>
+                        <li><a href="#" class="hover:text-white transition">Layanan Publik</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-4">Kontak</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-2"></i>
+                            <span>DS. pematang sukatani, KEC. mesuji makmur, KAB. ogan komring ilir, PROV. sumatera selatan 30681</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-2"></i>
+                            <span>+6282331728202</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2"></i>
+                            <span>pematangsukatani@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p>© 2023 Desa Pematang Sukatani. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-6 right-6 bg-green-700 text-white p-3 rounded-full shadow-lg hidden">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <script>
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+        
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Hide mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+        
+        // Back to Top Button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('hidden');
+            } else {
+                backToTopButton.classList.add('hidden');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Service Modal
+        const serviceButtons = document.querySelectorAll('.service-btn');
+        const serviceModal = document.getElementById('serviceModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalContent = document.getElementById('modalContent');
+        const closeModal = document.getElementById('closeModal');
+        const printBtn = document.getElementById('printBtn');
+        
+        const serviceDetails = {
+            ktp: {
+                title: 'Persyaratan Pembuatan KTP-e',
+                content: `
+                    <h4 class="font-bold text-lg mb-3">Persyaratan:</h4>
+                    <ol class="list-decimal pl-5 space-y-2 mb-6">
+                        <li>Fotokopi KK (Kartu Keluarga)</li>
+                        <li>Surat pengantar dari RT/RW setempat</li>
+                        <li>Pas foto ukuran 3x4 berlatar merah (2 lembar)</li>
+                        <li>Fotokopi akta kelahiran atau surat keterangan lahir</li>
+                        <li>KTP lama (untuk perpanjangan)</li>
+                        <li>Mengisi formulir pendaftaran</li>
+                    </ol>
+                    <h4 class="font-bold text-lg mb-3">Prosedur:</h4>
+                    <ol class="list-decimal pl-5 space-y-2">
+                        <li>Datang ke Kantor Desa dengan membawa persyaratan lengkap</li>
+                        <li>Mengisi formulir pendaftaran</li>
+                        <li>Melakukan pengambilan foto dan sidik jari</li>
+                        <li>Proses verifikasi data oleh petugas</li>
+                        <li>Pengambilan KTP-e (biasanya membutuhkan waktu 1-2 minggu)</li>
+                    </ol>
+                    <p class="mt-4 text-sm text-gray-600">* Biaya: Gratis</p>
+                `
+            },
+            akta: {
+                title: 'Persyaratan Pembuatan Akta Kelahiran',
+                content: `
+                    <h4 class="font-bold text-lg mb-3">Persyaratan:</h4>
+                    <ol class="list-decimal pl-5 space-y-2 mb-6">
+                        <li>Surat keterangan kelahiran dari dokter/bidan/penolong kelahiran</li>
+                        <li>Fotokopi KK (Kartu Keluarga)</li>
+                        <li>Fotokopi KTP kedua orang tua</li>
+                        <li>Fotokopi surat nikah orang tua</li>
+                        <li>Surat pengantar dari RT/RW setempat</li>
+                        <li>Formulir permohonan yang telah diisi</li>
+                    </ol>
+                    <h4 class="font-bold text-lg mb-3">Prosedur:</h4>
+                    <ol class="list-decimal pl-5 space-y-2">
+                        <li>Datang ke Kantor Desa dengan membawa persyaratan lengkap</li>
+                        <li>Mengisi formulir pendaftaran</li>
+                        <li>Verifikasi dokumen oleh petugas</li>
+                        <li>Pembuatan akta kelahiran dalam waktu maksimal 1x24 jam</li>
+                    </ol>
+                    <p class="mt-4 text-sm text-gray-600">* Biaya: Gratis (WNI), Rp 50.000 (WNA)</p>
+                `
+            },
+            sku: {
+                title: 'Persyaratan Surat Keterangan Usaha',
+                content: `
+                    <h4 class="font-bold text-lg mb-3">Persyaratan:</h4>
+                    <ol class="list-decimal pl-5 space-y-2 mb-6">
+                        <li>Fotokopi KTP pemohon</li>
+                        <li>Fotokopi KK (Kartu Keluarga)</li>
+                        <li>Surat pengantar dari RT/RW setempat</li>
+                        <li>Pas foto ukuran 3x4 (2 lembar)</li>
+                        <li>Berkas pendukung usaha (jika ada, seperti IUMK, NPWP, dll)</li>
+                    </ol>
+                    <h4 class="font-bold text-lg mb-3">Prosedur:</h4>
+                    <ol class="list-decimal pl-5 space-y-2">
+                        <li>Datang ke Kantor Desa dengan membawa persyaratan lengkap</li>
+                        <li>Mengisi formulir permohonan</li>
+                        <li>Petugas akan melakukan survei lokasi usaha</li>
+                        <li>Proses verifikasi data oleh lurah</li>
+                        <li>Pengambilan surat (biasanya selesai dalam 3-5 hari kerja)</li>
+                    </ol>
+                    <p class="mt-4 text-sm text-gray-600">* Biaya: Rp 25.000 - Rp 50.000 (tergantung jenis usaha)</p>
+                `
+            }
+        };
+        
+        serviceButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const serviceType = this.getAttribute('data-service');
+                modalTitle.textContent = serviceDetails[serviceType].title;
+                modalContent.innerHTML = serviceDetails[serviceType].content;
+                serviceModal.classList.remove('hidden');
+            });
+        });
+        
+        closeModal.addEventListener('click', function() {
+            serviceModal.classList.add('hidden');
+        });
+        
+        printBtn.addEventListener('click', function() {
+            window.print();
+        });
+        
+        // Gallery Modal
+        const galleryButtons = document.querySelectorAll('.gallery-btn');
+        const galleryModal = document.getElementById('galleryModal');
+        const modalGalleryImage = document.getElementById('modalGalleryImage');
+        const modalGalleryTitle = document.getElementById('modalGalleryTitle');
+        const closeGalleryModal = document.getElementById('closeGalleryModal');
+        
+        galleryButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const imageUrl = this.getAttribute('data-image');
+                const imageTitle = this.getAttribute('data-title');
+                
+                modalGalleryImage.src = imageUrl;
+                modalGalleryImage.alt = imageTitle;
+                modalGalleryTitle.textContent = imageTitle;
+                
+                galleryModal.classList.remove('hidden');
+            });
+        });
+        
+        closeGalleryModal.addEventListener('click', function() {
+            galleryModal.classList.add('hidden');
+        });
+        
+        // Contact Form Submission
+        const contactForm = document.getElementById('contactForm');
+        
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // Simple validation
+            if (!name || !email || !subject || !message) {
+                alert('Harap isi semua field yang wajib diisi!');
+                return;
+            }
+            
+            // Here you would typically send the data to a server
+            // For demo, we'll just show an alert
+            alert(`Terima kasih ${name}, pesan Anda telah berhasil dikirim. Kami akan segera menghubungi Anda kembali.`);
+            
+            // Reset form
+            contactForm.reset();
+        });
+        
+        // Animated Counter for Stats
+        const animateCounters = () => {
+            const counters = [
+                { element: document.getElementById('population'), target: 12345 },
+                { element: document.getElementById('families'), target: 3456 },
+                { element: document.getElementById('events'), target: 128 },
+                { element: document.getElementById('achievements'), target: 24 }
+            ];
+            
+            const duration = 2000; // Duration in ms
+            const stepTime = 30; // ms
+            
+            counters.forEach(counter => {
+                if (!counter.element) return;
+                
+                const start = 0;
+                const end = counter.target;
+                const stepCount = duration / stepTime;
+                const increment = (end - start) / stepCount;
+                let current = start;
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= end) {
+                        clearInterval(timer);
+                        current = end;
+                    }
+                    counter.element.textContent = Math.floor(current).toLocaleString();
+                }, stepTime);
+            });
+        };
+        
+        // Trigger counter animation when stats section is in view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        const statsSection = document.querySelector('.bg-gray-100');
+        if (statsSection) {
+            observer.observe(statsSection);
+        }
+    </script>
+</body>
+</html>

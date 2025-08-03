@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gelato Coffee - Speciality Coffee Shop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #F9F5F0;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/62fc12e5-9e22-46ee-82dc-f11463aafb31.png') no-repeat center center;
+            background-size: cover;
+        }
+        
+        .menu-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+        
+        .scroll-hidden::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .scroll-hidden {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        /* Animation for menu items */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animate-fade-in {
+            animation: fadeIn 0.5s ease forwards;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="text-2xl font-bold text-brown-800">
+                <span class="text-amber-900">Gelato</span> Coffee
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="hover:text-amber-700 transition-all">Home</a>
+                <a href="#about" class="hover:text-amber-700 transition-all">About</a>
+                <a href="#menu" class="hover:text-amber-700 transition-all">Menu</a>
+                <a href="#gallery" class="hover:text-amber-700 transition-all">Gallery</a>
+                <a href="#contact" class="hover:text-amber-700 transition-all">Contact</a>
+            </div>
+            <div class="hidden md:block">
+                <button class="bg-amber-800 text-white px-4 py-2 rounded-full hover:bg-amber-700 transition-all">
+                    Make Reservation
+                </button>
+            </div>
+            <button class="md:hidden text-amber-900" id="mobile-menu-button">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+            <div id="mobile-menu" class="hidden md:hidden absolute top-16 left-0 right-0 bg-white shadow-lg">
+                <div class="flex flex-col space-y-4 p-4">
+                    <a href="#home" class="hover:text-amber-700 transition-all">Home</a>
+                    <a href="#about" class="hover:text-amber-700 transition-all">About</a>
+                    <a href="#menu" class="hover:text-amber-700 transition-all">Menu</a>
+                    <a href="#gallery" class="hover:text-amber-700 transition-all">Gallery</a>
+                    <a href="#contact" class="hover:text-amber-700 transition-all">Contact</a>
+                    <button class="bg-amber-800 text-white px-4 py-2 rounded-full hover:bg-amber-700 transition-all mt-2">
+                        Make Reservation
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient h-screen flex items-center justify-center text-white pt-16">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">coffee sahabat</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">jadikan hidpmu sempuran seperti secangkir coffe</p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="#menu" class="bg-amber-700 hover:bg-amber-600 text-white px-8 py-3 rounded-full transition-all">
+                    Our Menu
+                </a>
+                <a href="#about" class="bg-transparent border-2 border-white hover:bg-white hover:text-amber-900 text-white px-8 py-3 rounded-full transition-all">
+                    Learn More
+                </a>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-0 right-0 text-center">
+            <a href="#about" class="text-white animate-bounce">
+                <i class="fas fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/dc836c72-5c0c-4f3d-8260-f0bd081f99dc.png" alt="Barista carefully preparing coffee with artisan tools in a modern coffee shop setting" class="rounded-lg shadow-xl w-full" />
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold mb-6 text-amber-900">Our Story</h2>
+                    <p class="text-gray-600 mb-4">
+                       Semua berawal dari kecintaan kami terhadap aroma kopi yang menguar hangat setiap pagi. Kami percaya bahwa kopi bukan sekadar minuman ia adalah perbincangan, penghubung, dan pelarian sejenak dari hiruk-pikuk dunia. coffee shop kami hadir dengan semangat untuk menghadirkan kopi terbaik dari biji pilihan petani lokal Indonesia. Kami menjalin hubungan langsung dengan para petani, karena kami percaya bahwa kualitas kopi terbaik dimulai dari tanah yang subur dan tangan yang penuh cinta.
+                    </p>
+                    <p class="text-gray-600 mb-6">
+                        Lebih dari sekadar tempat menikmati kopi, kami ingin menciptakan ruang di mana setiap orang bisa merasa nyaman, berkumpul, bekerja, atau sekadar melepas penat. Dari barista kami yang ramah, racikan kopi yang penuh karakter, hingga suasana hangat di setiap sudut semuanya kami hadirkan dengan hati.
+
+Terima kasih telah menjadi bagian dari perjalanan ini. Satu cangkir, satu cerita. Kami tak sabar untuk menyeduh kenangan bersamamu.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div class="flex items-center">
+                            <div class="bg-amber-100 p-3 rounded-full mr-3">
+                                <i class="fas fa-seedling text-amber-700"></i>
+                            </div>
+                            <span>Sumber yang Etis</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-amber-100 p-3 rounded-full mr-3">
+                                <i class="fas fa-certificate text-amber-700"></i>
+                            </div>
+                            <span>Kualitas Premium</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-amber-100 p-3 rounded-full mr-3">
+                                <i class="fas fa-leaf text-amber-700"></i>
+                            </div>
+                            <span>Ramah Lingkungan</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-amber-100 p-3 rounded-full mr-3">
+                                <i class="fas fa-heart text-amber-700"></i>
+                            </div>
+                            <span>Dibuat dengan Cinta</span>
+                        </div>
+                    </div>
+                    <a href="#about" class="border-2 border-amber-800 text-amber-800 px-6 py-2 rounded-full hover:bg-amber-800 hover:text-white transition-all">
+                        Learn More About Our Process
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-20 bg-amber-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4 text-amber-900">Our Specialty Menu</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Temukan pilihan kopi dan kue-kue artisanal kami yang dikurasi dengan cermat</p>
+            </div>
+            
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold mb-6 text-center text-amber-800">Coffee Selection</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Coffee Item 1 -->
+                    <div class="bg-white p-6 rounded-xl shadow-md menu-item transition-all animate-fade-in" style="animation-delay: 0.1s;">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a55d2832-4f09-4751-bf55-e07cfd061a0a.png" alt="Rich espresso with perfect crema in a white ceramic cup" class="w-full h-48 object-cover rounded-lg mb-4" />
+                        <h4 class="text-xl font-bold mb-2">Gelato Espresso</h4>
+                        <p class="text-gray-600 mb-4">Aroma intens dengan sentuhan karamel dan cokelat hitam. Campuran khas kami.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-amber-800">IDR 15K</span>
+                            <a href="https://wa.me/6282249883529?text=I'd%20like%20to%20order%20[ITEM]" class="bg-amber-700 text-white px-4 py-2 rounded-full text-sm hover:bg-amber-600 transition-all">
+                                Add to Order
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Coffee Item 2 -->
+                    <div class="bg-white p-6 rounded-xl shadow-md menu-item transition-all animate-fade-in" style="animation-delay: 0.2s;">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0e5d54c4-70bf-4591-adf1-2e7c5e10c9c7.png" alt="Latte art with intricate leaf pattern in a glass cup" class="w-full h-48 object-cover rounded-lg mb-4" />
+                        <h4 class="text-xl font-bold mb-2">Honeycomb Latte</h4>
+                        <p class="text-gray-600 mb-4">Espresso lembut dengan susu kukus dan sirup sarang lebah buatan sendiri.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-amber-800">IDR 20K</span>
+                            <button class="bg-amber-700 text-white px-4 py-2 rounded-full text-sm hover:bg-amber-600 transition-all">
+                                Add to Order
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Coffee Item 3 -->
+                    <div class="bg-white p-6 rounded-xl shadow-md menu-item transition-all animate-fade-in" style="animation-delay: 0.3s;">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/14ec7722-575d-49b5-ba9e-caed25f481e5.png" alt="Cold brew coffee with ice in a clear glass, condensation on the sides" class="w-full h-48 object-cover rounded-lg mb-4" />
+                        <h4 class="text-xl font-bold mb-2">Tropical Cold Brew</h4>
+                        <p class="text-gray-600 mb-4">Minuman seduh dingin selama 18 jam dengan sedikit buah tropis dan hasil akhir yang lembut.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-amber-800">IDR 23K</span>
+                            <button class="bg-amber-700 text-white px-4 py-2 rounded-full text-sm hover:bg-amber-600 transition-all">
+                                Add to Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-4">
+                <h3 class="text-2xl font-bold mb-6 text-center text-amber-800">Delicious Pastries</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Pastry Item 1 -->
+                    <div class="bg-white p-6 rounded-xl shadow-md menu-item transition-all animate-fade-in" style="animation-delay: 0.4s;">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/5e444021-167a-4ece-84f3-958f847e809d.png" alt="Freshly baked croissants with flaky golden layers on a wooden board" class="w-full h-48 object-cover rounded-lg mb-4" />
+                        <h4 class="text-xl font-bold mb-2">Almond Croissant</h4>
+                        <p class="text-gray-600 mb-4">Lapisan renyah berisi krim almond dan diberi irisan almond di atasnya.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-amber-800">IDR 8K</span>
+                            <button class="bg-amber-700 text-white px-4 py-2 rounded-full text-sm hover:bg-amber-600 transition-all">
+                                Add to Order
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Pastry Item 2 -->
+                    <div class="bg-white p-6 rounded-xl shadow-md menu-item transition-all animate-fade-in" style="animation-delay: 0.5s;">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/96acad21-88f7-4c4b-896c-808f0203cba4.png" alt="Moist cinnamon roll with thick cream cheese frosting drizzled on top" class="w-full h-48 object-cover rounded-lg mb-4" />
+                        <h4 class="text-xl font-bold mb-2">Cinnamon Roll</h4>
+                        <p class="text-gray-600 mb-4">Adonan brioche lembut digulung dengan gula kayu manis dan diberi lapisan krim keju.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-amber-800">IDR 12K</span>
+                            <button class="bg-amber-700 text-white px-4 py-2 rounded-full text-sm hover:bg-amber-600 transition-all">
+                                Add to Order
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Pastry Item 3 -->
+                    <div class="bg-white p-6 rounded-xl shadow-md menu-item transition-all animate-fade-in" style="animation-delay: 0.6s;">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4303f6a8-d6de-40db-b486-0ced554b877e.png" alt="Chocolate chip cookies with melted chocolate chunks on a rustic plate" class="w-full h-48 object-cover rounded-lg mb-4" />
+                        <h4 class="text-xl font-bold mb-2">Double Chocolate Cookie</h4>
+                        <p class="text-gray-600 mb-4">Kue coklat hitam pekat dengan potongan coklat susu, sedikit renyah di luar dan lembut di dalam.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-amber-800">IDR 15K</span>
+                            <button class="bg-amber-700 text-white px-4 py-2 rounded-full text-sm hover:bg-amber-600 transition-all">
+                                Add to Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-16">
+                <a href="#menu" class="border-2 border-amber-800 text-amber-800 px-8 py-3 rounded-full hover:bg-amber-800 hover:text-white transition-all font-bold">
+                    View Full Menu
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4 text-amber-900">Our Coffee Moments</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Di balik layar proses pembuatan kopi dan suasana yang nyaman</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/fbf9bf8d-5f7b-4eab-bb81-d17c427769f7.png" alt="Barista using professional espresso machine in a well-lit coffee shop" class="w-full h-64 object-cover hover:scale-105 transition duration-500" />
+                </div>
+                <div class="overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e031bcaa-7a99-43c1-a90c-fc06d0e2f384.png" alt="Coffee beans from different origins arranged in small bowls for cupping session" class="w-full h-64 object-cover hover:scale-105 transition duration-500" />
+                </div>
+                <div class="overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/74972931-b3ca-41b3-b095-c3eef8cd0b5a.png" alt="Hand pouring brewed coffee through a V60 dripper with precision" class="w-full h-64 object-cover hover:scale-105 transition duration-500" />
+                </div>
+                <div class="overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b8965b99-50bc-473f-881a-7ada8490ccec.png" alt="Cozy coffee shop interior with wooden tables and hanging plants" class="w-full h-64 object-cover hover:scale-105 transition duration-500" />
+                </div>
+                <div class="overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/77812980-2bc1-4594-860d-4e49e27da48f.png" alt="Close-up of latte art swan with perfect microfoam texture" class="w-full h-64 object-cover hover:scale-105 transition duration-500" />
+                </div>
+                <div class="overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4959a5b0-6653-4037-8d48-86a56a310ebe.png" alt="Customer enjoying coffee while working on laptop in natural light" class="w-full h-64 object-cover hover:scale-105 transition duration-500" />
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="https://www.instagram.com/_chachajha?igsh=OTJzZ3FtOW1oamhw" target="_blank" class="bg-amber-700 text-white px-8 py-3 rounded-full hover:bg-amber-600 transition-all font-bold">
+                    Follow Us on Instagram
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-amber-800 text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Apa Kata Pelanggan Kami</h2>
+                <p class="max-w-2xl mx-auto opacity-90">Dengarkan pelanggan kami yang puas tentang pengalaman Kopi Gelato mereka</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-amber-900 p-8 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-300 text-xl mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="mb-6">"Espresso terbaik yang pernah saya minum di kota ini! Para barista adalah seniman sejati yang memperhatikan setiap detail. Suasananya sempurna untuk bekerja maupun bersantai."</p>
+                    <div class="flex items-center">
+                        <div class="bg-amber-700 w-12 h-12 rounded-full mr-4 overflow-hidden">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4b32022b-3821-4c82-8fdf-8803015fee7f.png" alt="Portrait of satisfied young female customer" class="w-full h-full object-cover" />
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Siti.</h4>
+                            <p class="text-amber-200 text-sm">Regular Customer</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-amber-900 p-8 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-300 text-xl mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="mb-6">"Saya penggemar kopi dan Gelato Coffee tidak pernah mengecewakan. Kopi single origin pour-over mereka luar biasa. Stafnya sangat berpengetahuan tentang produk mereka."</p>
+                    <div class="flex items-center">
+                        <div class="bg-amber-700 w-12 h-12 rounded-full mr-4 overflow-hidden">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2bebc517-e9b5-4611-9595-7f9115c7c32a.png" alt="Portrait of male coffee enthusiast with beard" class="w-full h-full object-cover" />
+                        </div>
+                        <div>
+                            <h4 class="font-bold">cak bud.</h4>
+                            <p class="text-amber-200 text-sm">Coffee Blogger</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-amber-900 p-8 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-300 text-xl mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="mb-6">"Croissant almond yang dipadukan dengan honeycomb latte mereka adalah kombinasi sarapan andalan saya. Suasananya begitu nyaman sehingga saya sering kembali beberapa kali seminggu."</p>
+                    <div class="flex items-center">
+                        <div class="bg-amber-700 w-12 h-12 rounded-full mr-4 overflow-hidden">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/01ef0846-1e7d-463f-bda0-d8403dd35dca.png" alt="Portrait of smiling middle-aged woman" class="w-full h-full object-cover" />
+                        </div>
+                        <div>
+                            <h4 class="font-bold">mba maryam.</h4>
+                            <p class="text-amber-200 text-sm">Local Resident</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h2 class="text-3xl font-bold mb-6 text-amber-900">Visit Us</h2>
+                    <div class="mb-8">
+                        <div class="flex items-start mb-6">
+                            <div class="text-amber-700 mr-4 mt-1">
+                                <i class="fas fa-map-marker-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Location</h4>
+                                <p class="text-gray-600">depan lapangan, depan gedung SH<br>Jl. pematang sukatani, kec mesuji makmur</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start mb-6">
+                            <div class="text-amber-700 mr-4 mt-1">
+                                <i class="fas fa-clock text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Opening Hours</h4>
+                                <p class="text-gray-600">Monday - Friday: 4:30 11:45 PM<br>
+                                Saturday - Sunday: 5:00 PM - 12:30 AM</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start mb-6">
+                            <div class="text-amber-700 mr-4 mt-1">
+                                <i class="fas fa-phone-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Contact</h4>
+                                <p class="text-gray-600">+6282345670956<br>
+                                coffesahabat3@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-amber-100 text-amber-800 w-10 h-10 rounded-full flex items-center justify-center hover:bg-amber-200 transition-all">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="bg-amber-100 text-amber-800 w-10 h-10 rounded-full flex items-center justify-center hover:bg-amber-200 transition-all">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="bg-amber-100 text-amber-800 w-10 h-10 rounded-full flex items-center justify-center hover:bg-amber-200 transition-all">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold mb-6 text-amber-900">Make a Reservation</h2>
+                    <form class="space-y-4">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="name" class="block mb-1">Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent">
+                            </div>
+                            <div>
+                                <label for="email" class="block mb-1">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent">
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="phone" class="block mb-1">Phone</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent">
+                            </div>
+                            <div>
+                                <label for="date" class="block mb-1">Date</label>
+                                <input type="date" id="date" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="time" class="block mb-1">Time</label>
+                            <input type="time" id="time" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="guests" class="block mb-1">Number of Guests</label>
+                            <select id="guests" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent">
+                                <option value="1">1 Person</option>
+                                <option value="2">2 People</option>
+                                <option value="3">3 People</option>
+                                <option value="4">4 People</option>
+                                <option value="5+">5+ People</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block mb-1">Special Requests</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"></textarea>
+                        </div>
+                        <a href="https://wa.me/qr/V6HHRPVU3IRHG1" class="w-full bg-amber-700 text-white py-3 rounded-lg hover:bg-amber-600 transition-all font-bold">
+                            Book Table
+                        </a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map -->
+    <div class="h-96 w-full">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9a21a948-c403-4824-86fa-20eaab54cc39.png" alt="Location map of Gelato Coffee shop in Jakarta with surrounding landmarks" class="w-full h-full object-cover" />
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-amber-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Gelato Coffee</h3>
+                    <p class="text-amber-200">Kedai kopi spesial yang menyajikan minuman berkualitas sejak 2025. Dibuat dengan penuh semangat, disajikan dengan cinta..</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-amber-200 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#about" class="text-amber-200 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#menu" class="text-amber-200 hover:text-white transition-colors">Menu</a></li>
+                        <li><a href="#gallery" class="text-amber-200 hover:text-white transition-colors">Gallery</a></li>
+                        <li><a href="#contact" class="text-amber-200 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Shop Hours</h3>
+                    <ul class="space-y-2 text-amber-200">
+                        <li>Monday - Friday: 4PM - 11PM</li>
+                        <li>Saturday: 5PM - 12AM</li>
+                        <li>Sunday: 5PM - 12AM</li>
+                        <li class="mt-4">Happy Hour: 2PM - 5PM</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Newsletter</h3>
+                    <p class="text-amber-200 mb-4">Berlangganan untuk mendapatkan informasi terbaru tentang promosi dan acara</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 w-full rounded-l-lg text-gray-800 focus:outline-none">
+                        <button class="bg-amber-700 px-4 py-2 rounded-r-lg hover:bg-amber-600 transition-colors" type="submit">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    <div class="mt-4 flex space-x-4">
+                        <a href="https://www.instagram.com/_chachajha?igsh=OTJzZ3FtOW1oamhw" target="_blank" class="text-amber-200 hover:text-white transition-colors"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="https://facebook.com" target="_blank" class="text-amber-200 hover:text-white transition-colors"><i class="fab fa-facebook-f text-xl"></i></a>
+                        <a href="https://wa.me/6282249883529" target="_blank" class="text-amber-200 hover:text-white transition-colors"><i class="fab fa-whatsapp text-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-amber-800 mt-12 pt-8 text-center text-amber-200">
+                <p>© 2025 Gelato Coffee. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Form submission for reservation
+        const reservationForm = document.querySelector('form');
+        if (reservationForm) {
+            reservationForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your reservation! We will contact you shortly to confirm.');
+                this.reset();
+            });
+        }
+        
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Animate elements when they come into view
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.animate-fade-in');
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if (elementPosition < screenPosition) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        };
+        
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+    </script>
+</body>
+</html>

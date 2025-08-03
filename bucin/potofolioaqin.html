@@ -1,0 +1,425 @@
+<html class="scroll-smooth" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Khoirul Muttaqin - Vector, Anime &amp; Web Designer Portfolio
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5f0e6;
+      color: #4b3b2b;
+    }
+    /* Custom scrollbar for better UX */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f5f0e6;
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: #a67c52;
+      border-radius: 10px;
+    }
+    /* Smooth fade-in animation for sections */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.8s forwards;
+    }
+    .fade-in-delay-1 {
+      animation-delay: 0.3s;
+    }
+    .fade-in-delay-2 {
+      animation-delay: 0.6s;
+    }
+    .fade-in-delay-3 {
+      animation-delay: 0.9s;
+    }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    /* Custom link underline effect */
+    a.custom-underline {
+      position: relative;
+      color: #4b3b2b;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a.custom-underline::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -3px;
+      left: 0;
+      background-color: #a67c52;
+      transition: width 0.3s ease;
+    }
+    a.custom-underline:hover {
+      color: #a67c52;
+    }
+    a.custom-underline:hover::after {
+      width: 100%;
+    }
+  </style>
+ </head>
+ <body class="antialiased">
+  <header class="sticky top-0 z-50 bg-cream bg-opacity-90 backdrop-blur-md shadow-md">
+   <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a class="text-2xl font-bold text-[#a67c52] tracking-wide select-none" href="#home">
+     Khoirul Muttaqin
+    </a>
+    <ul class="hidden md:flex space-x-8 text-[#4b3b2b] font-semibold">
+     <li>
+      <a class="hover:text-[#a67c52] transition" href="#about">
+       About
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-[#a67c52] transition" href="#projects">
+       Projects
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-[#a67c52] transition" href="#skills">
+       Skills
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-[#a67c52] transition" href="#education">
+       Education
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-[#a67c52] transition" href="#blog">
+       Blog &amp; Store
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-[#a67c52] transition" href="#contact">
+       Contact
+      </a>
+     </li>
+    </ul>
+    <button aria-label="Toggle menu" class="md:hidden text-[#a67c52] focus:outline-none" id="menu-btn">
+     <i class="fas fa-bars fa-lg">
+     </i>
+    </button>
+   </nav>
+   <div class="hidden md:hidden bg-[#f5f0e6] px-6 pb-4" id="mobile-menu">
+    <ul class="flex flex-col space-y-4 text-[#4b3b2b] font-semibold">
+     <li>
+      <a class="block hover:text-[#a67c52] transition" href="#about">
+       About
+      </a>
+     </li>
+     <li>
+      <a class="block hover:text-[#a67c52] transition" href="#projects">
+       Projects
+      </a>
+     </li>
+     <li>
+      <a class="block hover:text-[#a67c52] transition" href="#skills">
+       Skills
+      </a>
+     </li>
+     <li>
+      <a class="block hover:text-[#a67c52] transition" href="#education">
+       Education
+      </a>
+     </li>
+     <li>
+      <a class="block hover:text-[#a67c52] transition" href="#blog">
+       Blog &amp; Store
+      </a>
+     </li>
+     <li>
+      <a class="block hover:text-[#a67c52] transition" href="#contact">
+       Contact
+      </a>
+     </li>
+    </ul>
+   </div>
+  </header>
+  <main class="max-w-7xl mx-auto px-6 py-12">
+   <!-- Hero Section -->
+   <section class="flex flex-col-reverse md:flex-row items-center gap-10 fade-in" id="home">
+    <div class="md:w-1/2 space-y-6">
+     <h1 class="text-4xl md:text-5xl font-extrabold leading-tight text-[#a67c52]">
+      Khoirul Muttaqin
+     </h1>
+     <p class="text-lg md:text-xl text-[#4b3b2b]/90 max-w-xl">
+      Vector, Anime &amp; Website Designer
+      <br/>
+      Crafting unique digital experiences with creativity and precision.
+     </p>
+     <div class="flex flex-wrap gap-4 mt-4">
+      <a class="px-6 py-3 bg-[#a67c52] text-cream rounded-md font-semibold shadow-md hover:bg-[#8c6640] transition" href="#projects">
+       View Projects
+      </a>
+      <a class="px-6 py-3 border-2 border-[#a67c52] text-[#a67c52] rounded-md font-semibold hover:bg-[#a67c52] hover:text-cream transition" href="https://wa.me/6282249883529" target="_blank" rel="noopener noreferrer">
+       Contact Me
+      </a>
+     </div>
+    </div>
+    <div class="md:w-1/2 flex justify-center">
+     <img alt="Portrait vector art of Khoirul Muttaqin, a young male designer with glasses, holding a digital pen tablet, surrounded by anime and web design elements in warm brown and cream tones" class="rounded-xl shadow-lg w-72 h-72 object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/7e388738-4d18-4925-f921-fa80c3a8ba20.jpg" width="400"/>
+    </div>
+   </section>
+   <!-- About Section -->
+   <section class="mt-20 fade-in fade-in-delay-1" id="about">
+    <h2 class="text-3xl font-bold text-[#a67c52] mb-6 border-b-4 border-[#a67c52] inline-block pb-1">
+     About Me
+    </h2>
+    <div class="md:flex md:gap-12">
+     <div class="md:w-1/3 mb-8 md:mb-0">
+      <img alt="Khoirul Muttaqin working on vector design on a computer, surrounded by anime sketches and website wireframes, warm brown and cream color palette" class="rounded-lg shadow-md w-full object-cover" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/acae2787-6be6-4835-dc37-bd346883abde.jpg" width="300"/>
+     </div>
+     <div class="md:w-2/3 text-[#4b3b2b]/90 text-lg leading-relaxed">
+      <p>
+       Hello! I'm Khoirul Muttaqin, a passionate vector, anime, and website designer based in Indonesia. I specialize in creating vibrant vector illustrations, captivating anime videos, and sleek, user-friendly websites. My goal is to bring your ideas to life with creativity and technical expertise.
+      </p>
+      <p class="mt-4">
+       With years of experience in digital art and web development, I combine artistic vision with modern technology to deliver unique and engaging digital experiences.
+      </p>
+     </div>
+    </div>
+   </section>
+   <!-- Projects Section -->
+   <section class="mt-20 fade-in fade-in-delay-2" id="projects">
+    <h2 class="text-3xl font-bold text-[#a67c52] mb-6 border-b-4 border-[#a67c52] inline-block pb-1">
+     Projects
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+     <a aria-label="Open Anime Character Vector project in Google Drive" class="block bg-cream rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition relative group" href="https://drive.google.com/drive/folders/1V4-5Mi4ZBYAbaYEqLSUjWIHRmoQSHGo4?usp=drive_link" target="_blank" rel="noopener noreferrer">
+      <img alt="Vector art project showing a colorful anime character with dynamic pose and detailed shading in brown and cream tones" class="w-full h-48 object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/872639c4-8721-4bf1-d3e4-31534d2caa07.jpg" width="600"/>
+      <div class="p-5">
+       <h3 class="text-xl font-semibold text-[#4b3b2b] mb-2">
+        Anime Character Vector
+       </h3>
+       <p class="text-[#4b3b2b]/80 text-sm">
+        Created a detailed vector illustration of an anime character with dynamic poses and warm color palette.
+       </p>
+      </div>
+     </a>
+     <a aria-label="Open Anime Video Production project on YouTube channel" class="block bg-cream rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition relative group" href="https://youtube.com/@yuqiii_dayli?si=52a7K7YGjAxuyjn_" target="_blank" rel="noopener noreferrer">
+      <img alt="Screenshot from an anime style video project showing a fantasy scene with characters and vibrant colors in brown and cream hues" class="w-full h-48 object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/5f3e3126-0d97-464e-cf6d-0d3ddfbff795.jpg" width="600"/>
+      <div class="p-5">
+       <h3 class="text-xl font-semibold text-[#4b3b2b] mb-2">
+        Anime Video Production
+       </h3>
+       <p class="text-[#4b3b2b]/80 text-sm">
+        Produced a short anime video combining storytelling and vector animation techniques.
+       </p>
+      </div>
+     </a>
+     <a aria-label="Open Website Design project live site" class="block bg-cream rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition relative group" href="https://yuqii.gumroad.com/l/yuqii-website" target="_blank" rel="noopener noreferrer">
+      <img alt="Screenshot of a modern website design project with clean layout, warm brown and cream color scheme, and vector graphics" class="w-full h-48 object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/0daa28b9-2add-4864-8c2f-5eae4e837ec4.jpg" width="600"/>
+      <div class="p-5">
+       <h3 class="text-xl font-semibold text-[#4b3b2b] mb-2">
+        Website Design
+       </h3>
+       <p class="text-[#4b3b2b]/80 text-sm">
+        Designed and developed a responsive website with a focus on user experience and aesthetic appeal.
+       </p>
+      </div>
+     </a>
+    </div>
+   </section>
+   <!-- Skills Section -->
+   <section class="mt-20 fade-in fade-in-delay-3" id="skills">
+    <h2 class="text-3xl font-bold text-[#a67c52] mb-6 border-b-4 border-[#a67c52] inline-block pb-1">
+     Skills
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-[#4b3b2b]">
+     <div class="bg-cream rounded-xl shadow-md p-6 flex flex-col items-center">
+      <i class="fas fa-pencil-ruler fa-3x mb-4 text-[#a67c52]">
+      </i>
+      <h3 class="text-xl font-semibold mb-2">
+       Vector Design
+      </h3>
+      <p class="text-center text-sm text-[#4b3b2b]/80">
+       Adobe Illustrator, CorelDRAW, Affinity Designer
+      </p>
+     </div>
+     <div class="bg-cream rounded-xl shadow-md p-6 flex flex-col items-center">
+      <i class="fas fa-film fa-3x mb-4 text-[#a67c52]">
+      </i>
+      <h3 class="text-xl font-semibold mb-2">
+       Anime Video Editing
+      </h3>
+      <p class="text-center text-sm text-[#4b3b2b]/80">
+       Adobe After Effects, Premiere Pro, Blender Animation
+      </p>
+     </div>
+     <div class="bg-cream rounded-xl shadow-md p-6 flex flex-col items-center">
+      <i class="fas fa-code fa-3x mb-4 text-[#a67c52]">
+      </i>
+      <h3 class="text-xl font-semibold mb-2">
+       Web Development
+      </h3>
+      <p class="text-center text-sm text-[#4b3b2b]/80">
+       HTML, CSS, JavaScript, Tailwind CSS, React
+      </p>
+     </div>
+    </div>
+   </section>
+   <!-- Education Section -->
+   <section class="mt-20 fade-in fade-in-delay-3" id="education">
+    <h2 class="text-3xl font-bold text-[#a67c52] mb-6 border-b-4 border-[#a67c52] inline-block pb-1">
+     Education &amp; Location
+    </h2>
+    <div class="bg-cream rounded-xl shadow-md p-8 max-w-4xl mx-auto text-[#4b3b2b]">
+     <div class="mb-6">
+      <h3 class="text-2xl font-semibold mb-2">
+       Bachelor of Visual Communication Design
+      </h3>
+      <p class="text-sm text-[#4b3b2b]/80">
+       Universitas Negeri Yogyakarta, Indonesia
+      </p>
+      <p class="text-sm text-[#4b3b2b]/80">
+       2016 - 2020
+      </p>
+     </div>
+     <div>
+      <h3 class="text-2xl font-semibold mb-2">
+       Location
+      </h3>
+      <p class="text-sm text-[#4b3b2b]/80">
+       Yogyakarta, Indonesia
+      </p>
+      <p class="text-sm text-[#4b3b2b]/80">
+       Domicile: Sleman Regency
+      </p>
+     </div>
+    </div>
+   </section>
+   <!-- Blog & Store Section -->
+   <section class="mt-20 fade-in fade-in-delay-3" id="blog">
+    <h2 class="text-3xl font-bold text-[#a67c52] mb-6 border-b-4 border-[#a67c52] inline-block pb-1">
+     Blog &amp; Digital Store
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+     <a aria-label="Visit Lynk digital store" class="group block bg-cream rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-1" href="https://lynk.id/yuqii" rel="noopener noreferrer" target="_blank">
+      <img alt="Preview image of Lynk digital store homepage with brown and cream themed digital products" class="w-full h-48 object-cover" height="350" loading="lazy" src="https://storage.googleapis.com/a1aa/image/f77e167d-0976-40de-8327-7898cacab3a7.jpg" width="600"/>
+      <div class="p-5">
+       <h3 class="text-xl font-semibold text-[#4b3b2b] mb-2">
+        Lynk Digital Store
+       </h3>
+       <p class="text-[#4b3b2b]/80 text-sm">
+        Explore my curated digital products and services available on Lynk.
+       </p>
+       <span class="inline-block mt-3 text-[#a67c52] font-semibold group-hover:underline">
+        Visit Store →
+       </span>
+      </div>
+     </a>
+     <a aria-label="Visit Fiverr profile" class="group block bg-cream rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-1" href="https://www.fiverr.com/s/99EZRkA" rel="noopener noreferrer" target="_blank">
+      <img alt="Preview image of Fiverr profile page showing vector and anime design gigs with brown and cream color scheme" class="w-full h-48 object-cover" height="350" loading="lazy" src="https://storage.googleapis.com/a1aa/image/095f9eed-0706-4ecd-0bc1-92ce88e4528b.jpg" width="600"/>
+      <div class="p-5">
+       <h3 class="text-xl font-semibold text-[#4b3b2b] mb-2">
+        Fiverr Profile
+       </h3>
+       <p class="text-[#4b3b2b]/80 text-sm">
+        Hire me for vector art, anime video editing, and website design projects on Fiverr.
+       </p>
+       <span class="inline-block mt-3 text-[#a67c52] font-semibold group-hover:underline">
+        Visit Fiverr →
+       </span>
+      </div>
+     </a>
+    </div>
+   </section>
+   <!-- Contact Section -->
+   <section class="mt-20 fade-in fade-in-delay-3 max-w-3xl mx-auto" id="contact">
+    <h2 class="text-3xl font-bold text-[#a67c52] mb-6 border-b-4 border-[#a67c52] inline-block pb-1">
+     Contact Me
+    </h2>
+    <div class="bg-cream rounded-xl shadow-md p-8 text-[#4b3b2b]">
+     <p class="mb-6 text-lg">
+      Feel free to reach out for collaborations, projects, or just to say hello!
+     </p>
+     <div class="flex flex-col space-y-6 mb-8">
+      <a class="flex items-center gap-4 text-[#a67c52] hover:text-[#8c6640] transition font-semibold" href="https://wa.me/6282249883529" target="_blank" rel="noopener noreferrer">
+       <i class="fab fa-whatsapp fa-lg">
+       </i>
+       <span>
+        WhatsApp: +62 822-4988-3529
+       </span>
+      </a>
+      <a class="flex items-center gap-4 text-[#a67c52] hover:text-[#8c6640] transition font-semibold" href="mailto:muttaqindoank06@gmail.com">
+       <i class="fas fa-envelope fa-lg">
+       </i>
+       <span>
+        Email: muttaqindoank06@gmail.com
+       </span>
+      </a>
+      <a class="flex items-center gap-4 text-[#a67c52] hover:text-[#8c6640] transition font-semibold" href="tel:+6282249883529">
+       <i class="fas fa-phone fa-lg">
+       </i>
+       <span>
+        Phone: +62 822-4988-3529
+       </span>
+      </a>
+      <div class="flex space-x-8 mt-4">
+       <a aria-label="TikTok profile" class="text-[#a67c52] hover:text-[#8c6640] transition" href="https://www.tiktok.com/@_chacha619?_t=ZS-8yZ45uDVP2T&amp;_r=1" rel="noopener noreferrer" target="_blank">
+        <img alt="TikTok logo in brown and cream color style" class="w-10 h-10" height="40" loading="lazy" src="https://storage.googleapis.com/a1aa/image/63b4c625-6864-43ef-5dfb-f6002ffc0127.jpg" width="40"/>
+       </a>
+       <a aria-label="Instagram profile" class="text-[#a67c52] hover:text-[#8c6640] transition" href="https://www.instagram.com/_chachajha?igsh=OTJzZ3FtOW1oamhw" rel="noopener noreferrer" target="_blank">
+        <img alt="Instagram logo in brown and cream color style" class="w-10 h-10" height="40" loading="lazy" src="https://storage.googleapis.com/a1aa/image/cd0d7fb9-f9d0-44fd-9ef6-6a96bacc031c.jpg" width="40"/>
+       </a>
+      </div>
+     </div>
+     <form action="https://formsubmit.co/muttaqindoank06@gmail.com" method="POST" class="space-y-6" id="contact-form">
+      <input name="_captcha" type="hidden" value="false"/>
+      <input name="_next" type="hidden" value="#contact"/>
+      <div>
+       <label class="block mb-2 font-semibold" for="name">
+        Name
+       </label>
+       <input class="w-full rounded-md border border-[#a67c52] px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#a67c52]" id="name" name="name" placeholder="Your name" required="" type="text"/>
+      </div>
+      <div>
+       <label class="block mb-2 font-semibold" for="email">
+        Email
+       </label>
+       <input class="w-full rounded-md border border-[#a67c52] px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#a67c52]" id="email" name="email" placeholder="Your email" required="" type="email"/>
+      </div>
+      <div>
+       <label class="block mb-2 font-semibold" for="message">
+        Message
+       </label>
+       <textarea class="w-full rounded-md border border-[#a67c52] px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#a67c52]" id="message" name="message" placeholder="Write your message here..." required="" rows="5"></textarea>
+      </div>
+      <button class="bg-[#a67c52] text-cream px-6 py-3 rounded-md font-semibold shadow-md hover:bg-[#8c6640] transition" type="submit">
+       Send Message
+      </button>
+     </form>
+    </div>
+   </section>
+  </main>
+  <footer class="bg-[#a67c52] text-cream py-6 mt-20">
+   <div class="max-w-7xl mx-auto px-6 text-center text-sm select-none">
+    © 2024 Khoirul Muttaqin. All rights reserved.
+   </div>
+  </footer>
+  <script>
+   const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+ </body>
+</html>
